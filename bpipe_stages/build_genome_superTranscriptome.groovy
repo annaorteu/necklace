@@ -11,7 +11,7 @@ genome_superTranscriptome_dir="genome_superTranscriptome"
 
 merge_genome_annotations = {
       output.dir=genome_superTranscriptome_dir
-      produce("ref_annotations_combined.gtf","genome_merged.gft"){
+      produce("ref_annotations_combined.gtf","genome_merged.gtf"){
 	exec """
 	     cat $annotation > $output1 ;
 	     ${stringtie} --merge $stringtie_merge_options -G $output1 -o $output2 $input $annotation
