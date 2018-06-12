@@ -21,7 +21,7 @@ merge_genome_annotations = {
 
 flatten_gtf = {
      output.dir=genome_superTranscriptome_dir
-     from("genome_merged.gft") { produce("genome_merged.flattened.gtf"){
+     from("genome_merged.gtf") { produce("genome_merged.flattened.gtf"){
 	exec "$gtf2flatgtf $input $output" 
      }}
 }
